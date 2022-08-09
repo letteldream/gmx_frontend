@@ -536,8 +536,7 @@ export function getServerBaseUrl(chainId) {
     }
   }
   // return process.env.REACT_APP_SERVER_BASE_URL;
-
-  console.log(process.env.REACT_APP_SERVER_BASE_URL)
+  // console.log(process.env.REACT_APP_SERVER_BASE_URL)
 
   if (chainId === MAINNET) {
     return "https://gambit-server-staging.uc.r.appspot.com";
