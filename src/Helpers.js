@@ -158,33 +158,33 @@ export const ICONLINKS = {
   4: {
     GMX: {
       coingecko: "https://www.coingecko.com/en/coins/gmx",
-      rinkeby: "https://rinkeby.etherscan.io/address/0xdabD7dC270b0c793eEA8C586Dc5410Efda9999f8",
+      rinkeby: "https://rinkeby.etherscan.io/address/0x4B95Bd6413B7898A1093D2d23e7C53F90776DBA6",
     },
     GLP: {
-      rinkeby: "https://rinkeby.etherscan.io/address/0x0ffaBfcf9398dadB5165C241eEFE9261a071f463",
+      rinkeby: "https://rinkeby.etherscan.io/address/0x3ba517e1DF2B3953384fF00be320c2D6ed2e9Ae8",
     },
     ETH: {
       coingecko: "https://www.coingecko.com/en/coins/ethereum",
     },
     BNB: {
       coingecko: "https://www.coingecko.com/en/coins/bnb",
-      rinkeby: "https://rinkeby.etherscan.io/address/0xcb527E324C9d707Fe32B1D9053Eed1F7D7F60d26",
+      rinkeby: "https://rinkeby.etherscan.io/address/0x6010212108b6b11c5b6D4b34E1fF6b1d3b5Fe0f8",
     },
     BTC: {
       coingecko: "https://www.coingecko.com/en/coins/wrapped-bitcoin",
-      rinkeby: "https://rinkeby.etherscan.io/address/0x66DC71a0F819a43BD3A7bC7594dB9E5D045Bd02f",
+      rinkeby: "https://rinkeby.etherscan.io/address/0x09957291604e5e3DEcBAC540Ec29600f5257279E",
     },
     USDC: {
       coingecko: "https://www.coingecko.com/en/coins/usd-coin",
-      rinkeby: "https://rinkeby.etherscan.io/address/0x8308396892852b9c919cc897b862643e92273663",
+      rinkeby: "https://rinkeby.etherscan.io/address/0x7d63d15b0562C247752B8B465282131Ed4440B91",
     },
     USDT: {
       coingecko: "https://www.coingecko.com/en/coins/tether",
-      rinkeby: "https://rinkeby.etherscan.io/address/0xD39ba176Da989Cf7C3787658D52F35636D3c03Eb",
+      rinkeby: "https://rinkeby.etherscan.io/address/0xE9967f18437803926BcFDbe8349c04CE9c1A5e3d",
     },
     DAI: {
       coingecko: "https://www.coingecko.com/en/coins/dai",
-      rinkeby: "https://rinkeby.etherscan.io/address/0x421D1646cd8D347072820EAa0cb7758e921533AD",
+      rinkeby: "https://rinkeby.etherscan.io/address/0x4f03079E48C3b9B542a68303d94931d15c763c0a",
     },
   },
   56: {
@@ -548,7 +548,7 @@ export function getServerBaseUrl(chainId) {
   } else if (chainId === AVALANCHE) {
     return "https://gmx-avax-server.uc.r.appspot.com";
   } else if (chainId === RINKEBY) {
-  return process.env.REACT_APP_SERVER_BASE_URL;
+    return process.env.REACT_APP_SERVER_BASE_URL;
   }
   return "https://gmx-server-mainnet.uw.r.appspot.com";
 }
@@ -1564,7 +1564,7 @@ export function useEagerConnect(setActivatingConnector) {
           setActivatingConnector(connector);
           await activate(connector, undefined, true);
         }
-      } catch (ex) {}
+      } catch (ex) { }
 
       setTried(true);
     })();
